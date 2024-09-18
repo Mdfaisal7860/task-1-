@@ -1,59 +1,82 @@
-/* General styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .content {
-    padding-top: 60px; /* To prevent content overlap with fixed navbar */
-  }
-  
-  section {
-    height: 100vh;
-    padding: 20px;
-  }
-  
-  
-  #section1 { background-color: lightcoral; }
-  #section2 { background-color: lightblue; }
-  #section3 { background-color: lightgreen; }
-  #section4 { background-color: lightgoldenrodyellow; }
-  
-  /* Navbar styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .navbar ul li {
-    padding: 10px;
-  }
-  
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navbar ul li a:hover {
-    color: #ff9800;
-  }
-  
-  /* Change color when navbar is scrolled */
-  .scrolled {
-    background-color: #555;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+section {
+  padding: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home {
+  background-color: #ffdddd;
+}
+
+#about {
+  background-color: #ddffdd;
+}
+
+#services {
+  background-color: #ddddff;
+}
+
+#contact {
+  background-color: #ffffdd;
+}
+
+/* Sticky Navigation Scroll Effect */
+.scrolled {
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+}
+
+.scrolled a {
+  color: white;
+}
+
+.scrolled a:hover {
+  color: #f4f4f9;
+}
